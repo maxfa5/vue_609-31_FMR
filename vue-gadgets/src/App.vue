@@ -1,10 +1,15 @@
+<script>
+import ProductList from './components/ProductList.vue';
+</script>
+
+
 <template>
   <body>
     <div class="mx-auto w-[1440px] mb-25">
       <nav class="py-3 border-b border-b-slate-200">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img src="/vue-gadgets/public/logo (1).svg" alt="">
+            <img src="../vue-gadgets/public/logo (1).svg" alt="">
             <p class="text-sm">
               Лучшие цены <br> в интернет-магазинах
             </p>
@@ -13,7 +18,7 @@
             <li>
               <a href="" class="flex gap-3 items-center"></a>
               <span class="p-3 5 rounded-xl bg-slate-100 hover:bg-slate-200 transition">
-              <img src="/vue-gadgets/public/cart-icon (1).svg" alt="">
+              <img src="../vue-gadgets/public/cart-icon (1).svg" alt="">
 
               </span>
               Корзина
@@ -23,10 +28,11 @@
       </nav>
       <main class="pt-10">
         <h1 class="text-[40px] font-bold mb-5">Каталог</h1>
+        
         <div class="grid grid-cols-5 gap-5">
         <div class="p-5 bg-slate-100 rounded-xl flex flex-col justify-between gap-2">
           <div>
-            <img src="/vue-gadgets/public/product-1 (1).png"
+            <img src="../vue-gadgets/public/product-1 (1).png"
               class="mb-4"
               alt=""/>
             <h3 class="text-xl font-semibold">
@@ -52,6 +58,7 @@
           </div>
         </div>
         </div>
+        <product-list></product-list>
       </main>
     </div>    
     <footer class="p-6 bg-slate-100">
