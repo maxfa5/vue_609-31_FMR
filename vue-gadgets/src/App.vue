@@ -1,29 +1,9 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import axios from "axios";
-import ProductList from "./components/ProductList.vue";
+
+import VCatalog from "./components/VCatalog.vue";
 import logo from "/logo.svg";
 
 
-
-const items = ref([]);
-const fetchItems = async () => {
-    try {
-        const { data } = await axios.get(
-            "https://1201a231a73088af.mokky.dev/products"
-        );
-        items.value = data.map((obj) => ({
-            ...obj,
-            isFavorite: false,
-            isAdded: false,
-        }));
-    } catch (e) {
-        console.log(e);
-    }
-};
-onMounted(async () => {
-    await fetchItems();
-});
 </script>
 
 
@@ -75,10 +55,7 @@ onMounted(async () => {
       </div>
     </nav>
     
-    <main class="pt-10">
-      <h1 class="text-[40px] font-bold mb-5">Каталог</h1>
-        <product-list :items="items"></product-list>
-    </main>
+    <VCatalog></VCatalog>
   </div>    
     
   <footer class="p-6 bg-slate-100">
